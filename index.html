@@ -1,4 +1,96 @@
-<!-- ... existing code ... -->
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sp1ng | Roblox Scripter & Web Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0a0b0e',
+                            card: '#12141c',
+                            border: '#1f2430'
+                        },
+                        accent: {
+                            purple: '#8b5cf6',
+                            indigo: '#6366f1',
+                            cyan: '#06b6d4',
+                            pink: '#ec4899'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0b0e;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        code, pre, .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(18, 20, 28, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0b0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2430;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-dark-bg text-gray-100 flex flex-col justify-between selection:bg-accent-purple selection:text-white">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Background Decorative Gradients -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="fixed bottom-1/4 right-1/4 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10 pb-16 flex-grow">
+
+        <!-- Header / Bio Section -->
+        <header class="glass-panel glow-effect rounded-3xl p-6 sm:p-10 mb-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-accent-purple/10 to-transparent rounded-bl-full pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-6 sm:gap-8 relative z-10">
+                <!-- Avatar / Logo -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accent-purple to-accent-cyan rounded-2xl blur opacity-40 group-hover:opacity-75 transition duration-300"></div>
+                    <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-dark-card border border-white/10 flex items-center justify-center text-3xl sm:text-4xl font-extrabold text-white shadow-2xl">
+                        <span class="bg-gradient-to-br from-accent-purple to-accent-cyan bg-clip-text text-transparent">S1</span>
+                    </div>
+                </div>
+
+                <!-- Bio Info -->
                 <div class="text-center md:text-left space-y-3 flex-1">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-accent-cyan">
                         <i class="fa-solid fa-code text-xs"></i> Roblox Scripter & Web Developer
@@ -9,7 +101,7 @@
                     </h1>
 
                     <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-                        Professional Roblox scripter, web developer, and creator of custom multi-game script hubs and developer utilities. Architect of <span class="text-white font-semibold">Sp1ng Hub</span> and high-performance browser tools.
+                        Professional-grade Roblox script hub developer and web creator crafting high-performance, clean utilities and automation scripts. Focused on modern UI, reliability, and top-tier user experience across multiple games.
                     </p>
 
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
@@ -20,15 +112,137 @@
                             <i class="fa-solid fa-layer-group text-accent-cyan mr-1"></i> Multi-Game Hubs
                         </span>
                         <span class="px-3 py-1 rounded-lg bg-dark-bg/80 border border-white/5 text-xs text-gray-300 font-mono">
-                            <i class="fa-solid fa-shield text-amber-400 mr-1"></i> Private & Secure
+                            <i class="fa-solid fa-shield text-amber-400 mr-1"></i> Secure & Optimized
                         </span>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Section: Featured Projects -->
-<!-- ... existing code ... -->
+        <!-- Section: Featured Projects & Socials -->
+        <section class="mb-12">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-accent-purple"></i> Projects & Platforms
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-400">Direct links to official hubs, web tools, and community channels</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 self-start sm:self-auto">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Active & Maintained
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- Card 1: Sp1ng Hub -->
+                <a href="https://sp1ngimsp1ng.github.io/Sp1ng-hub-website/" target="_blank" class="glass-panel group rounded-2xl p-5 hover:border-accent-purple/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent-purple/20 text-accent-purple flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Web Hub</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-accent-purple transition-colors">Sp1ng Hub Website</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Official presentation hub for multi-game automation scripts and custom UI features.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-white/5 text-xs font-semibold text-accent-purple">
+                        <span>Visit Website</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- Card 2: Username Sniper -->
+                <a href="https://sp1ngimsp1ng.github.io/Roblox-6-Letter-Username-Sniper/" target="_blank" class="glass-panel group rounded-2xl p-5 hover:border-accent-cyan/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent-cyan/20 text-accent-cyan flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Tool</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-accent-cyan transition-colors">Roblox Username Sniper</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Web-based utility crafted to check and discover available short usernames on Roblox.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-white/5 text-xs font-semibold text-accent-cyan">
+                        <span>Launch Tool</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- Card 3: GitHub -->
+                <a href="https://github.com/sp1ngimsp1ng" target="_blank" class="glass-panel group rounded-2xl p-5 hover:border-white/40 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Code</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-white transition-colors">GitHub Profile</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Explore repositories, web source code, and developer projects.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 border-t border-white/5 text-xs font-semibold text-gray-300">
+                        <span>View Repositories</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- Card 4: ScriptBlox -->
+                <div class="glass-panel rounded-2xl p-5 border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Distribution</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">ScriptBlox Publisher</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Official releases and verified script updates shared with the community.</p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 text-xs font-semibold text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check"></i> Verified Creator
+                    </div>
+                </div>
+
+                <!-- Card 5: Rscripts -->
+                <div class="glass-panel rounded-2xl p-5 border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Community</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Rscripts Platform</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Showcase of community scripts, updates, and user ratings.</p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 text-xs font-semibold text-emerald-400 flex items-center gap-2">
+                        <i class="fa-solid fa-star"></i> Top Rated Scripts
+                    </div>
+                </div>
+
+                <!-- Card 6: YouTube / Discord -->
+                <div class="glass-panel rounded-2xl p-5 border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-discord"></i>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded-lg">Social</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Community & Updates</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">Connect for announcements, script showcases, and direct developer contact.</p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 text-xs font-semibold text-indigo-400 flex items-center gap-2">
+                        <i class="fa-solid fa-users"></i> Active Community
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- Section: Quick Tools (For Non-Coders & Creators) -->
         <section class="mb-12">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
@@ -175,14 +389,139 @@
             </div>
         </section>
 
-        <!-- Footer -->
-<!-- ... existing code ... -->
-        // Tool 3: Gradient Generator -> Replaced with Asset & Place ID Clean Formatter
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Sp1ng. All rights reserved. Built for performance and utility.</p>
+            <div class="flex items-center gap-4 text-gray-400">
+                <span>Roblox: <strong class="text-white">Rafoufou281117</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Utility Logic -->
+    <script>
+        // Copy to clipboard helper using execCommand for safe iframe execution
+        function copyToClipboard(text, successMessage) {
+            if (!text) {
+                showToast('Nothing to copy!', 'error');
+                return;
+            }
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMessage || 'Copied to clipboard!', 'success');
+            } catch (err) {
+                showToast('Failed to copy', 'error');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Toast Notification System
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `pointer-events-auto px-4 py-3 rounded-xl text-xs font-semibold shadow-xl border backdrop-blur-md transition-all duration-300 transform translate-y-2 opacity-0 flex items-center gap-2 ${
+                type === 'success' 
+                    ? 'bg-dark-card/90 border-accent-purple/40 text-white' 
+                    : 'bg-dark-card/90 border-red-500/40 text-red-400'
+            }`;
+            
+            toast.innerHTML = type === 'success' 
+                ? `<i class="fa-solid fa-circle-check text-accent-purple"></i> ${message}`
+                : `<i class="fa-solid fa-circle-exclamation text-red-400"></i> ${message}`;
+
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+
+        // Tool 1: Color3 & Hex Converter Logic
+        function updateFromPicker(hex) {
+            const r = parseInt(hex.slice(1, 3), 16) || 0;
+            const g = parseInt(hex.slice(3, 5), 16) || 0;
+            const b = parseInt(hex.slice(5, 7), 16) || 0;
+
+            document.getElementById('slider-r').value = r;
+            document.getElementById('slider-g').value = g;
+            document.getElementById('slider-b').value = b;
+
+            syncColorValues(r, g, b, hex);
+        }
+
+        function updateFromSliders() {
+            const r = parseInt(document.getElementById('slider-r').value);
+            const g = parseInt(document.getElementById('slider-g').value);
+            const b = parseInt(document.getElementById('slider-b').value);
+
+            const hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+            document.getElementById('color-picker').value = hex;
+
+            syncColorValues(r, g, b, hex);
+        }
+
+        function syncColorValues(r, g, b, hex) {
+            document.getElementById('r-val').innerText = r;
+            document.getElementById('g-val').innerText = g;
+            document.getElementById('b-val').innerText = b;
+            document.getElementById('color-preview').style.backgroundColor = hex;
+            document.getElementById('out-fromrgb').value = `Color3.fromRGB(${r}, ${g}, ${b})`;
+        }
+
+        // Tool 2: RichText Formatter Logic
+        let isBold = true;
+        let isItalic = false;
+
+        function toggleStyle(style) {
+            if (style === 'bold') {
+                isBold = !isBold;
+                const btn = document.getElementById('btn-bold');
+                if (isBold) {
+                    btn.className = "flex-1 py-1 px-2 rounded-lg text-xs font-bold bg-white/15 text-white";
+                } else {
+                    btn.className = "flex-1 py-1 px-2 rounded-lg text-xs font-bold bg-white/5 text-gray-400";
+                }
+            } else if (style === 'italic') {
+                isItalic = !isItalic;
+                const btn = document.getElementById('btn-italic');
+                if (isItalic) {
+                    btn.className = "flex-1 py-1 px-2 rounded-lg text-xs italic bg-white/15 text-white";
+                } else {
+                    btn.className = "flex-1 py-1 px-2 rounded-lg text-xs italic bg-white/5 text-gray-400";
+                }
+            }
+            buildRichText();
+        }
+
+        function buildRichText() {
+            let text = document.getElementById('rt-text').value || "";
+            let size = document.getElementById('rt-size').value || "14";
+            let colorHex = document.getElementById('rt-color').value || "#ffffff";
+
+            if (isBold) text = `<b>${text}</b>`;
+            if (isItalic) text = `<i>${text}</i>`;
+            text = `<font color="${colorHex}" size="${size}">${text}</font>`;
+
+            document.getElementById('richtext-output').value = text;
+        }
+
+        // Tool 3: Asset & Place ID Cleaner
         function extractRobloxId() {
             const raw = document.getElementById('id-input').value.trim();
             const numbers = raw.match(/\d+/g);
             if (numbers && numbers.length > 0) {
-                // Return the longest sequence of digits found in the URL (typically the Place ID / Asset ID)
                 let bestId = numbers.reduce((a, b) => a.length >= b.length ? a : b);
                 document.getElementById('id-output').value = bestId;
             } else {
@@ -190,6 +529,7 @@
             }
         }
 
+        // Initialize default states on load
         window.addEventListener('DOMContentLoaded', () => {
             updateFromSliders();
             buildRichText();
